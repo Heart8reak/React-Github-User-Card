@@ -57,6 +57,7 @@ class Search extends React.Component {
         </form>
 
         <br />
+
         <div className="follower-section">
           {this.state.github.map(item => {
             return (
