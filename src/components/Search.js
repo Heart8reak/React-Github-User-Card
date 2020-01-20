@@ -36,6 +36,9 @@ class Search extends React.Component {
   onSubmit = e => {
     e.preventDefault();
     this.getFollower();
+    this.setState({
+      searchTerm: ''
+    });
     console.log(this.getFollower());
   };
 
@@ -52,16 +55,20 @@ class Search extends React.Component {
           ></input>
           <button>See who is Following</button>
         </form>
-        {this.state.github.map(item => {
-          return (
-            <FollowerCard
-              key={item.id}
-              loginFollow={item.login}
-              imgFollow={item.avatar_url}
-              urlFollow={item.html_url}
-            />
-          );
-        })}
+
+        <br />
+        <div className="follower-section">
+          {this.state.github.map(item => {
+            return (
+              <FollowerCard
+                key={item.id}
+                loginFollow={item.login}
+                imgFollow={item.avatar_url}
+                urlFollow={item.html_url}
+              />
+            );
+          })}
+        </div>
       </div>
     );
   }

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../src/App.css';
+import '../../src/App.scss';
 import axios from 'axios';
 
 import FollowerCard from './FollowerCard';
@@ -79,7 +79,6 @@ class Home extends React.Component {
           repos={this.state.repos}
           following={this.state.following}
         />
-
         <div>
           <h1>GitHub Followers:</h1>
         </div>
