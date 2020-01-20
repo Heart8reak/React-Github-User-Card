@@ -3,10 +3,10 @@
   "name": "react-github-user-card",
   "builds": [
     {
-      "src": "package.json",
+      "src": "react-github-user-card/package.json",
       "use": "@now/static-build",
       "config": { "distDir": "build" }
     }
   ],
-  "routes": [{ "src": "/(.*)", "dest": "$1" }]
+  "routes": [{ "src": "/(.*)", "dest": "react-github-user-card/$1" }]
 }
